@@ -4,6 +4,8 @@ This is a JavaScript code for Adaptive Staircase Thresholding Procedure. You can
 [Start your first thresholding test online here!](https://run.pavlovia.org/sijiazhao/threshold_demo)
 This is just a demo described in our paper and no data is saved.
 
+The demo was developed in PsychoPy and with some additional in-house code included here.
+
 # How to use this
 You need some basic knowledge of JavaScript to understand and use the code. 
 
