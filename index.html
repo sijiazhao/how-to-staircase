@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Staircase</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        header {
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        h2, footer {
+            margin-top: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        h5 {
+            margin-bottom: 2rem;
+        }
+
+        pre,
+        code {
+            font-size: 1em !important;
+        }
+
+        .text-code {
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+<main class="container">
+    <header>
+        <div class="display-2">Staircase class</div>
+        <div class="display-6">How to add a Staircase to your online study.</div>
+    </header>
+    <div id="text-currentStep"></div>
+    <h2>1. Add the Staircase JavaScript file to your code</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col border rounded pt-3">
+                <h5>Either</h5>
+                <p>Add
+                    <code>import "staircase.js"</code> to your JavaScript code
+                </p>
+            </div>
+            <div class="col border rounded pt-3 ms-5">
+                <h5>Or</h5>
+                <p>Add
+                    <code>&lt;script src="staircase.js"&gt;&lt;/script&gt;</code> to your HTML code
+                </p>
+            </div>
+        </div>
+    </div>
+    <h2>2. Create the Staircase</h2>
+    <p>Create a new variable for the Staircase. In this example, it is called
+        <code>myStaircase</code>.
+    </p>
+    <pre class="bg-light p-3"><code><span class="text-primary">let</span> <span class="text-success">myStaircase</span></code></pre>
+    <p>Then, initialise the Staircase.</p>
+    <pre class="bg-light p-3"><code><span class="text-success">myStaircase</span> = <span class="text-primary">new</span> Staircase()</code></pre>
+    <p>The default parameters are:</p>
+    <pre class="bg-light p-3"><code><span class="text-success">myStaircase</span> = <span class="text-primary">new</span> Staircase(
+  <u>min</u> = <span class="text-primary">1</span>, <u>max</u> = <span class="text-primary">10</span>, <u>start</u> = <u>min</u>,
+  <u>up</u> = {<span class="text-code">increment</span>: <span class="text-primary">+1</span>, <span class="text-code">repeatsToMove</span>: <span class="text-primary">1</span>},
+  <u>down</u> = {<span class="text-code">increment</span>: <span class="text-primary">-1</span>, <span class="text-code">repeatsToMove</span>: <span class="text-primary">1</span>}
+)</code></pre>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Parameter</th>
+            <th scope="col">Type</th>
+            <th scope="col">Default</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="font-monospace text-decoration-underline">min</td>
+            <td class="font-monospace">number</td>
+            <td class="font-monospace">1</td>
+            <td>Lowest level on the staircase</td>
+        </tr>
+        <tr>
+            <td class="font-monospace text-decoration-underline">max</td>
+            <td class="font-monospace">number</td>
+            <td class="font-monospace">10</td>
+            <td>Highest level on the staircase</td>
+        </tr>
+        <tr>
+            <td class="font-monospace text-decoration-underline">start</td>
+            <td class="font-monospace">number</td>
+            <td class="font-monospace text-decoration-underline">min</td>
+            <td>Starting position on the staircase</td>
+        </tr>
+        <tr>
+            <td class="font-monospace">
+                <u>up</u>.<span class="text-code">increment</span>
+            </td>
+            <td class="font-monospace">int</td>
+            <td class="font-monospace">+1</td>
+            <td>Number of steps and direction when moving "up"</td>
+        </tr>
+        <tr>
+            <td class="font-monospace">
+                <u>up</u>.<span class="text-code">repeatsToMove</span>
+            </td>
+            <td class="font-monospace">int</td>
+            <td class="font-monospace">1</td>
+            <td>Number of consecutive
+                <code>moveUp()</code> before moving "up"
+            </td>
+        </tr>
+        <tr>
+            <td class="font-monospace">
+                <u>down</u>.<span class="text-code">increment</span>
+            </td>
+            <td class="font-monospace">int</td>
+            <td class="font-monospace">-1</td>
+            <td>Number of steps and direction when moving "down"</td>
+        </tr>
+        <tr>
+            <td class="font-monospace">
+                <u>down</u>.<span class="text-code">repeatsToMove</span>
+            </td>
+            <td class="font-monospace">int</td>
+            <td class="font-monospace">1</td>
+            <td>Number of consecutive
+                <code>moveDown()</code> before moving "down"
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>3. Using the Staircase</h2>
+    <p>Call
+        <code>myStaircase.moveUp()</code> to attempt to move up the staircase. If the number of consecutive repeats of
+        <code>moveUp()</code> equals
+        <code>up.repeatsToMove</code>, the move will succeed. Likewise, use
+        <code>myStaircase.moveDown()</code> to attempt a move downwards.
+    </p>
+    <div class="border border-bottom-0 rounded-top p-3 text-muted">Example</div>
+    <pre class="border border-top-0 rounded-bottom bg-light p-3"><code><span class="text-primary">if</span> (<span class="text-success">response</span> == <span class="text-success">correctAnswer</span>) {
+  <span class="text-success">myStaircase</span>.<span class="text-code">moveUp</span>()
+} <span class="text-primary">else</span> {
+  <span class="text-success">myStaircase</span>.<span class="text-code">moveDown</span>()
+}</code></pre>
+    <p>
+        <code>myStaircase</code> contains various properties that can be accessed and modified.
+    </p>
+    <div class="border border-bottom-0 rounded-top p-3 text-muted">Example</div>
+    <pre class="border border-top-0 rounded-bottom bg-light p-3"><code><span class="text-primary">if</span> (<span class="text-success">myStaircase</span>.<span class="text-code">reversals</span> >= <span class="text-primary">5</span>) {
+  <span class="text-muted">// do something</span>
+}</code></pre>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Property</th>
+            <th scope="col">Type</th>
+            <th scope="col">Default starting value</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="font-monospace">.<span class="text-code">minimum</span>
+            </td>
+            <td class="font-monospace">number</td>
+            <td class="font-monospace">1</td>
+            <td>Lowest level on the staircase</td>
+        </tr>
+        <tr>
+            <td class="font-monospace">.<span class="text-code">maximum</span>
+            </td>
+            <td class="font-monospace">number</td>
+            <td class="font-monospace">10</td>
+            <td>Highest level on the staircase</td>
+        </tr>
+        <tr>
+            <td class="font-monospace">.<span class="text-code">up</span>
+            </td>
+            <td class="font-monospace">object</td>
+            <td class="font-monospace">{<span class="text-code">increment</span>:
+                <span class="text-primary">+1</span>,
+                <span class="text-code">repeatsToMove</span>:
+                <span class="text-primary">1</span>}
+            </td>
+            <td>Parameters for moving "up" the staircase</td>
+        </tr>
+        <tr>
+            <td class="font-monospace">.<span class="text-code">down</span>
+            </td>
+            <td class="font-monospace">object</td>
+            <td class="font-monospace">{<span class="text-code">increment</span>:
+                <span class="text-primary">-1</span>,
+                <span class="text-code">repeatsToMove</span>:
+                <span class="text-primary">1</span>}
+            </td>
+            <td>Parameters for moving "down" the staircase</td>
+        </tr>
+        <tr>
+            <td class="font-monospace">.<span class="text-code">currentStep</span>
+            </td>
+            <td class="font-monospace">number</td>
+            <td class="font-monospace text-decoration-underline">start</td>
+            <td>Current step on the staircase</td>
+        </tr>
+        <tr>
+            <td class="font-monospace">.<span class="text-code">repeats</span>
+            </td>
+            <td class="font-monospace">object</td>
+            <td class="font-monospace">{up: 0, down: 0}</td>
+            <td>Current number of consecutive repeats</td>
+        </tr>
+        <tr>
+            <td class="font-monospace">.<span class="text-code">reversals</span>
+            </td>
+            <td class="font-monospace">number</td>
+            <td class="font-monospace">0</td>
+            <td>Number of reversals</td>
+        </tr>
+        <tr>
+            <td class="font-monospace">.<span class="text-code">lastStepDirection</span>
+            </td>
+            <td class="font-monospace">string</td>
+            <td class="font-monospace">null</td>
+            <td>Direction of the last successful step change:
+                <code>up</code>,
+                <code>down</code>
+            </td>
+        </tr>
+        <tr>
+            <td class="font-monospace">.<span class="text-code">history</span>
+            </td>
+            <td class="font-monospace">number[]</td>
+            <td class="font-monospace">empty array</td>
+            <td>History of all steps on the staircase.<br>
+                The position is recorded even if the move did not occur, i.e.
+                <span class="text-code">repeatsToMove</span> not fulfilled
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <footer class="text-center border-top p-2">Sijia Zhao (2020-2021) sijia.zhao@psy.ox.ac.uk</footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
