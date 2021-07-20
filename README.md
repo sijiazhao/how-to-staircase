@@ -1,4 +1,4 @@
-This is a JavaScript code for Adaptive Staircase Thresholding Procedure. The efficacy of this procedure is demonstrated and documented in [Zhao, S., Brown, C. A., Holt, L. L., & Dick, F. (2021). Robust and efficient online auditory psychophysics with the right auditory hygiene. BioRxiv. https://doi.org/10.1101/2021.07.17.452796](https://doi.org/10.1101/2021.07.17.452796).
+This is a JavaScript code for Adaptive Staircase Thresholding Procedure. The efficacy of this procedure is demonstrated and documented in [Zhao, S., Brown, C. A., Holt, L. L., & Dick, F. (2021). Robust and efficient online auditory psychophysics with the right auditory hygiene. BioRxiv.](https://doi.org/10.1101/2021.07.17.452796)
 
 # Try it first!
 [Start your first thresholding test online here!](https://run.pavlovia.org/sijiazhao/threshold_demo)
@@ -14,7 +14,7 @@ If you want to add it to [Pavlovia] (https://pavlovia.org/), it is very easy. Th
 If you feel comfortable with JavaScript, see [HERE for more details](https://sijiazhao.github.io/how-to-staircase/class).
 
 # How to cite us
-If you want to acknowledge use of this software when you publish your research, please cite us: [Zhao S, Brown C, Holt L, Dick F. Online tests yield robust thresholds with the right auditory hygiene LINK WILL BE AVAILABLE LATER](https://sijiazhao.github.io/how-to-staircase/)
+If you want to acknowledge use of this software when you publish your research, please cite us: [Zhao, S., Brown, C. A., Holt, L. L., & Dick, F. (2021). Robust and efficient online auditory psychophysics with the right auditory hygiene. BioRxiv.](https://doi.org/10.1101/2021.07.17.452796)
 
 # Contact
 Dr Sijia Zhao (sijia.zhao@psy.ox.ac.uk)
