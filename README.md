@@ -25,13 +25,15 @@ Dr Sijia Zhao (sijia.zhao@psy.ox.ac.uk)
 Try it first: [A demo](https://run.pavlovia.org/sijiazhao/volumechecking_demo)
 
 Code: [GitLab](https://gitlab.pavlovia.org/sijiazhao/volumechecking_demo)
-Automatic Implementation:[A website made with love](https://run.pavlovia.org/sijiazhao/headphones-check/)
+Implementation: [A website can automatically integrate the task into your Pavlovia experiment](https://run.pavlovia.org/sijiazhao/headphones-check/)
+Gorilla: [Gorilla Open Material - SoundVolumeSetting](https://app.gorilla.sc/openmaterials/261557)
 
 ### Online headphone screening test developed by Chait Lab (UCL)
 Try it first: [A demo](https://chaitlabucl.github.io/HeadphoneCheck_Test/headphonesCheckHugginsPitch.html)
 
 Code: [Github](https://chaitlabucl.github.io/HeadphoneCheck_Test/)
-Automatic Implementation:[A website made with love](https://run.pavlovia.org/sijiazhao/headphones-check/)
+Implementation: [A website can automatically integrate the task into your Pavlovia experiment](https://run.pavlovia.org/sijiazhao/headphones-check/)
+Gorilla: [Gorilla Open Material - Headphone test](https://gorilla.sc/openmaterials/100917)
 
 
 -- All developed with love for hearing 😊 --
